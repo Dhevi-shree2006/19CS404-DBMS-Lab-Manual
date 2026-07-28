@@ -22,31 +22,24 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 - Payments tracked for memberships and sessions.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_fitness.png)
+<img width="1612" height="1035" alt="image" src="https://github.com/user-attachments/assets/aea42e43-9a23-4e35-8bf4-837463a3a93f" />
+
 
 ### Entities and Attributes
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+<img width="845" height="430" alt="image" src="https://github.com/user-attachments/assets/f0c7750b-1977-4914-b211-e856139aa8ba" />
+
 
 ### Relationships and Constraints
 
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
+<img width="691" height="376" alt="image" src="https://github.com/user-attachments/assets/808dd01b-690b-4529-845a-f7e93057d223" />
+
 
 ### Assumptions
-- 
-- 
-- 
+
+- A member can join multiple programs.
+- Trainers can be assigned to multiple programs.
+- Personal training sessions always involve one trainer and one member.
 
 ---
 
@@ -64,31 +57,21 @@ The Central Library wants to manage book lending and cultural events.
 - Overdue fines apply for late returns.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_library.png)
+<img width="887" height="515" alt="image" src="https://github.com/user-attachments/assets/24449aee-9c85-41e3-a77c-d1f2726d2ecb" />
 
 ### Entities and Attributes
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+<img width="840" height="780" alt="image" src="https://github.com/user-attachments/assets/5591cdcb-de4c-4ccd-8099-699c1ed80d99" />
+
 
 ### Relationships and Constraints
+<img width="847" height="737" alt="image" src="https://github.com/user-attachments/assets/e5481b2c-3f58-49a4-a1a4-ef8fa7026dfc" />
 
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
 
 ### Assumptions
-- 
-- 
-- 
+1.A member can borrow multiple books, but each loan entry is for one book at a time.
+2.FineAmount is calculated separately and stored in the Loan entity.
+3.A room can host many events but an event can take place in only one room.
 
 ---
 
@@ -106,38 +89,21 @@ A popular restaurant wants to manage reservations, orders, and billing.
 - Waiters assigned to serve reservations.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_restaurant.png)
+<img width="1292" height="902" alt="resturant draw drawio (1)" src="https://github.com/user-attachments/assets/19355cec-b56d-4e55-9d54-ef9b3471b610" />
 
 ### Entities and Attributes
+<img width="840" height="767" alt="image" src="https://github.com/user-attachments/assets/43d8b4ac-9c1c-4c79-80c7-b6153eb3c994" />
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
 
 ### Relationships and Constraints
 
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
+<img width="863" height="882" alt="image" src="https://github.com/user-attachments/assets/10715ce1-5dac-49cc-aade-4fbb2dcbe5fd" />
 
 ### Assumptions
-- 
-- 
-- 
+- A customer may or may not make a reservation before ordering.
+- Each order contains one dish per entry (multiple dishes = multiple order entries).
+- Billing is done per reservation, not per individual order.
+- A waiter can serve multiple orders but an order is handled by exactly one waiter.
 
 ---
 
-## Instructions for Students
-
-1. Complete **all three scenarios** (A, B, C).  
-2. Identify entities, relationships, and attributes for each.  
-3. Draw ER diagrams using **draw.io / diagrams.net** or hand-drawn & scanned.  
-4. Fill in all tables and assumptions for each scenario.  
-5. Export the completed Markdown (with diagrams) as **a single PDF**
