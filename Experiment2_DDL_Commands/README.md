@@ -105,123 +105,221 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
--- Paste Question 1 here
+Create a table named Invoices with the following constraints:
+
+InvoiceID as INTEGER should be the primary key.
+InvoiceDate as DATE.
+DueDate as DATE should be greater than the InvoiceDate.
+Amount as REAL should be greater than 0.
 
 ```sql
--- Paste your SQL code below for Question 1
+CREATE TABLE Invoices(
+InvoiceID INTEGER PRIMARY KEY,
+InvoiceDate DATE,
+DueDate DATE,
+Amount REAL,
+CHECK (DueDate > InvoiceDate),
+CHECK (Amount > 0)
+);
 ```
 
 **Output:**
 
-![Output1](output.png)
+<img width="1231" height="361" alt="image" src="https://github.com/user-attachments/assets/7a51f5d1-3683-4b26-a927-57d660438726" />
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+Create a table named Reviews with the following columns:
+
+ReviewID as INTEGER
+ProductID as INTEGER
+Rating as REAL
+ReviewText as TEXT
 
 ```sql
--- Paste your SQL code below for Question 2
+CREATE TABLE Reviews(
+ReviewID INTEGER,
+ProductID INTEGER,
+Rating REAL,
+ReviewText TEXT
+);
 ```
 
 **Output:**
+<img width="1308" height="325" alt="image" src="https://github.com/user-attachments/assets/3fcd11ef-9e1b-4c61-92e7-c3e3c237f568" />
 
-![Output2](output.png)
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+Create a table named Department with the following constraints:
+DepartmentID as INTEGER should be the primary key.
+DepartmentName as TEXT should be unique and not NULL.
+Location as TEXT.
 
 ```sql
--- Paste your SQL code below for Question 3
+CREATE TABLE Department(
+DepartmentID INTEGER PRIMARY KEY,
+DepartmentName TEXT UNIQUE NOT NULL,
+Location TEXT
+)
 ```
 
 **Output:**
 
-![Output3](output.png)
+<img width="1903" height="277" alt="image" src="https://github.com/user-attachments/assets/a29c6453-87a8-4849-a3b9-b28d01484a25" />
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+Create a table named Orders with the following columns:
+
+OrderID as INTEGER
+OrderDate as TEXT
+CustomerID as INTEGER
 
 ```sql
--- Paste your SQL code below for Question 4
+CREATE TABLE Orders(
+OrderID INTEGER,
+OrderDate TEXT,
+CustomerID INTEGER
+)
 ```
 
 **Output:**
 
-![Output4](output.png)
+<img width="1326" height="377" alt="image" src="https://github.com/user-attachments/assets/c651f398-e83a-4bc9-a0cb-e70bc060d907" />
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+Insert the below data into the Student_details table, allowing the Subject and MARKS columns to take their default values.
+
+RollNo                Name                    Gender      
+----------            ------------            ----------  
+204                   Samuel Black            M          
+
+Note: The Subject and MARKS columns will use their default values.
 
 ```sql
--- Paste your SQL code below for Question 5
+INSERT INTO Student_details(RollNo,Name,Gender)
+VALUES(204,'Samuel Black','M')
 ```
 
 **Output:**
 
-![Output5](output.png)
+<img width="1097" height="327" alt="image" src="https://github.com/user-attachments/assets/3c628a8c-1019-49e5-a5f2-ac4ab9ee0a1d" />
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+Insert all customers from Old_customers into Customers
+
+Table attributes are CustomerID, Name, Address, Email
 
 ```sql
--- Paste your SQL code below for Question 6
+INSERT INTO Customers(CustomerID,Name,Address,Email)
+SELECT CustomerID,Name,Address,Email
+FROM Old_customers
 ```
 
 **Output:**
 
-![Output6](output.png)
+<img width="1638" height="342" alt="image" src="https://github.com/user-attachments/assets/1a346641-b17d-48a9-826a-112b2b8e4213" />
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+Insert all employees from Former_employees into Employee
+
+Table attributes are EmployeeID, Name, Department, Salary
 
 ```sql
--- Paste your SQL code below for Question 7
+INSERT INTO Employee(EmployeeID,Name,Department,Salary)
+SELECT EmployeeID,Name,Department,Salary 
+FROM Former_employees
 ```
 
 **Output:**
 
-![Output7](output.png)
+<img width="1302" height="355" alt="image" src="https://github.com/user-attachments/assets/8d4de3db-4a26-4661-b125-d72d7f44db2b" />
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+Write a SQL query to Add a new column Country as text in the Student_details table.
+
+Sample table: Student_details
+
+ cid              name             type   notnull     dflt_value  pk
+---------------  ---------------  -----  ----------  ----------  ----------
+0                RollNo           int    0                       1
+1                Name             VARCH  1                       0
+2                Gender           TEXT   1                       0
+3                Subject          VARCH  0                       0
+4                MARKS            INT (  0                       0
 
 ```sql
--- Paste your SQL code below for Question 8
+ALTER TABLE Student_details
+ADD COLUMN Country TEXT
 ```
 
 **Output:**
 
-![Output8](output.png)
+<img width="1227" height="288" alt="image" src="https://github.com/user-attachments/assets/777a8db5-0eae-42b5-ba7b-90db4a4b140a" />
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+Write a SQL query to Add a new column mobilenumber as number in the Student_details table.
+
+Sample table: Student_details
+
+ cid              name             type   notnull     dflt_value  pk
+---------------  ---------------  -----  ----------  ----------  ----------
+0                RollNo           int    0                       1
+1                Name             VARCH  1                       0
+2                Gender           TEXT   1                       0
+3                Subject          VARCH  0                       0
+4                MARKS            INT (  0                       0
 
 ```sql
--- Paste your SQL code below for Question 9
+ALTER TABLE Student_details
+ADD COLUMN mobilenumber number
 ```
 
 **Output:**
 
-![Output9](output.png)
+<img width="1232" height="283" alt="image" src="https://github.com/user-attachments/assets/2133b7b8-ad7a-41ca-bb53-58d6456bf079" />
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+Create a table named Employees with the following constraints:
+
+EmployeeID should be the primary key.
+FirstName and LastName should be NOT NULL.
+Email should be unique.
+Salary should be greater than 0.
+DepartmentID should be a foreign key referencing the Departments table.
 
 ```sql
--- Paste your SQL code below for Question 10
+CREATE TABLE Employees(
+EmployeeID INTEGER PRIMARY KEY,
+FirstName TEXT NOT NULL,
+LastName TEXT NOT NULL,
+Email TEXT UNIQUE,
+Salary REAL CHECK(Salary>0),
+DepartmentID INTEGER,
+FOREIGN KEY(DepartmentID)REFERENCES Departments(DepartmentID)
+);
 ```
 
 **Output:**
 
-![Output10](output.png)
+<img width="1337" height="348" alt="image" src="https://github.com/user-attachments/assets/54525d94-2537-474d-937a-343d3e70578a" />
+
 
 
 ## RESULT
