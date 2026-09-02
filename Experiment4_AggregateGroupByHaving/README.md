@@ -38,10 +38,13 @@ HAVING condition;
 
 **Question 1**
 --
--- Paste Question 1 here
+Write a SQL query to calculate total purchase amount of all orders. Return total purchase amount.
+
+Sample table: orders
 
 ```sql
--- Paste your SQL code below for Question 1
+SELECT SUM(purch_amt) AS TOTAL
+FROM orders;
 ```
 
 **Output:**
@@ -50,10 +53,14 @@ HAVING condition;
 
 **Question 2**
 ---
--- Paste Question 2 here
+Write a SQL query to Calculate the average email length (in characters) for people who lives in Mumbai city
+
+Table: customer
 
 ```sql
--- Paste your SQL code below for Question 2
+SELECT AVG(LENGTH(email)) AS avg_email_length_below_30 
+FROM customer
+WHERE city='Mumbai';
 ```
 
 **Output:**
@@ -62,10 +69,12 @@ HAVING condition;
 
 **Question 3**
 ---
--- Paste Question 3 here
+Write a SQL query to count the number of customers. Return number of customers.
+
+Sample table: customer
 
 ```sql
--- Paste your SQL code below for Question 3
+SELECT COUNT(*) AS COUNT FROM customer;
 ```
 
 **Output:**
@@ -74,10 +83,14 @@ HAVING condition;
 
 **Question 4**
 ---
--- Paste Question 4 here
+What is the total number of appointments scheduled by each doctor?
+
+Sample table:Appointments Table
 
 ```sql
--- Paste your SQL code below for Question 4
+SELECT DoctorID , COUNT(AppointmentID)  AS TotalAppointments 
+FROM Appointments
+GROUP BY DoctorID;
 ```
 
 **Output:**
@@ -86,10 +99,15 @@ HAVING condition;
 
 **Question 5**
 ---
--- Paste Question 5 here
+How many patients have expired insurance coverage for each insurance company?
+
+Sample table:Insurance Table
 
 ```sql
--- Paste your SQL code below for Question 5
+SELECT InsuranceCompany , COUNT(*) AS TotalExpiredPatients 
+FROM Insurance
+WHERE date(Substr(ValidityPeriod,15)) < date('now')
+GROUP BY InsuranceCompany;
 ```
 
 **Output:**
@@ -98,10 +116,15 @@ HAVING condition;
 
 **Question 6**
 ---
--- Paste Question 6 here
+What is the total number of appointments scheduled for each day?
+
+Sample table:Appointments Table
 
 ```sql
--- Paste your SQL code below for Question 6
+SELECT DATE(AppointmentDateTime) AS AppointmentDate , COUNT(*) AS TotalAppointments 
+FROM Appointments
+GROUP BY DATE(AppointmentDateTime)
+ORDER BY DATE(AppointmentDateTime);
 ```
 
 **Output:**
@@ -110,10 +133,15 @@ HAVING condition;
 
 **Question 7**
 ---
--- Paste Question 7 here
+Write the SQL query that accomplishes the grouping of data by age intervals using the expression (age/5)5, calculates the minimum age for each group, and excludes groups where the minimum age is not less than 25.
+
+Sample table: customer1
 
 ```sql
--- Paste your SQL code below for Question 7
+SELECT (age / 5) * 5 AS age_group,MIN(age)
+FROM customer1
+GROUP BY (age / 5) * 5
+HAVING MIN(age) < 25;
 ```
 
 **Output:**
@@ -122,10 +150,15 @@ HAVING condition;
 
 **Question 8**
 ---
--- Paste Question 8 here
+Which cities (addresses) in the "customer1" table have an average salary lesser than Rs. 15000
+
+Sample table: customer1
 
 ```sql
--- Paste your SQL code below for Question 8
+SELECT address, AVG(salary)
+FROM customer1
+GROUP BY address
+HAVING AVG(salary) < 15000;
 ```
 
 **Output:**
@@ -134,27 +167,40 @@ HAVING condition;
 
 **Question 9**
 ---
--- Paste Question 9 here
+Write the SQL query that accomplishes the grouping of data by age, calculates the average income for each age group, and includes only those age groups where the average income falls between 300,000 and 500,000.
+
+Sample table: employee
 
 ```sql
--- Paste your SQL code below for Question 9
+SELECT age, AVG(income)
+FROM employee
+GROUP BY age
+HAVING AVG(income) BETWEEN 300000 AND 500000;
 ```
 
 **Output:**
 
-![Output9](output.png)
+
+
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+Write the SQL query that accomplishes the selection of total number of products for each category from the "products" table, and includes only those products where the minimum category ID is less than 3.
+
+Sample table: products
 
 ```sql
--- Paste your SQL code below for Question 10
+SELECT category_id , count(product_name)
+FROM products
+GROUP BY category_id
+HAVING MIN(category_id) < 3;
 ```
 
 **Output:**
 
-![Output10](output.png)
+
+
 
 
 ## RESULT
