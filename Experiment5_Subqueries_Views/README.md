@@ -38,10 +38,18 @@ DROP VIEW view_name;
 
 **Question 1**
 --
--- Paste Question 1 here
+Write a SQL query that retrieves the names of students and their corresponding grades, where the grade is equal to the maximum grade achieved in each subject.
+
+Sample table: GRADES
 
 ```sql
--- Paste your SQL code below for Question 1
+SELECT student_name,grade
+FROM GRADES
+WHERE(subject,grade) IN (
+SELECT subject,MAX(grade)
+FROM GRADES
+GROUP BY subject
+);
 ```
 
 **Output:**
@@ -50,10 +58,15 @@ DROP VIEW view_name;
 
 **Question 2**
 ---
--- Paste Question 2 here
+Write a SQL query to Retrieve the medications with dosages equal to the lowest dosage
+
+Medications Table
 
 ```sql
--- Paste your SQL code below for Question 2
+SELECT medication_id,medication_name,dosage
+FROM Medications
+WHERE dosage = (SELECT MIN(dosage) 
+                FROM Medications);
 ```
 
 **Output:**
@@ -62,10 +75,27 @@ DROP VIEW view_name;
 
 **Question 3**
 ---
--- Paste Question 3 here
+Write a SQL query to Identify customers whose city is different from the city of the customer with the highest ID
+
+SAMPLE TABLE: customer
+
+name             type
+---------------  ---------------
+id               INTEGER
+name             TEXT
+city             TEXT
+email            TEXT
+phone            INTEGER
 
 ```sql
--- Paste your SQL code below for Question 3
+SELECT *
+FROM customer
+WHERE city!=(
+    SELECT city
+    FROM customer
+    ORDER BY id DESC
+    LIMIT 1
+);
 ```
 
 **Output:**
@@ -74,10 +104,19 @@ DROP VIEW view_name;
 
 **Question 4**
 ---
--- Paste Question 4 here
+Write a SQL query to Find employees who have an age less than the average age of employees with incomes over 1 million
+
+Employee Table
 
 ```sql
--- Paste your SQL code below for Question 4
+SELECT *
+FROM Employee
+WHERE age < (
+            SELECT AVG(age)
+            FROM Employee
+            WHERE income > 1000000
+            );
+            
 ```
 
 **Output:**
@@ -86,10 +125,27 @@ DROP VIEW view_name;
 
 **Question 5**
 ---
--- Paste Question 5 here
+Write a SQL query to Retrieve the names of customers who have a phone number that is not shared with any other customer.
+
+SAMPLE TABLE: customer
+
+name             type
+---------------  ---------------
+id               INTEGER
+name             TEXT
+city             TEXT
+email            TEXT
+phone            INTEGER
 
 ```sql
--- Paste your SQL code below for Question 5
+SELECT name
+FROM customer
+WHERE phone IN(
+            SELECT phone
+            FROM customer
+            GROUP BY phone
+            HAVING COUNT(phone)=1
+            );
 ```
 
 **Output:**
@@ -98,10 +154,14 @@ DROP VIEW view_name;
 
 **Question 6**
 ---
--- Paste Question 6 here
+From the following tables write a SQL query to find salespeople who had more than one customer. Return salesman_id and name.
 
 ```sql
--- Paste your SQL code below for Question 6
+SELECT s.salesman_id,s.name
+FROM salesman s
+JOIN customer C ON s.salesman_id = c.salesman_id
+GROUP BY s.salesman_id , s.name
+HAVING COUNT(c.customer_id)>1;
 ```
 
 **Output:**
@@ -110,10 +170,16 @@ DROP VIEW view_name;
 
 **Question 7**
 ---
--- Paste Question 7 here
+Write a query to display all the customers whose ID is the difference between the salesperson ID of Mc Lyon and 2001.
 
 ```sql
--- Paste your SQL code below for Question 7
+SELECT *
+FROM customer
+WHERE customer_id=(
+                SELECT salesman_id
+                FROM salesman
+                WHERE name='Mc Lyon'
+                )-2001;
 ```
 
 **Output:**
@@ -122,10 +188,16 @@ DROP VIEW view_name;
 
 **Question 8**
 ---
--- Paste Question 8 here
+From the following tables, write a SQL query to find all the orders issued by the salesman 'Paul Adam'. Return ord_no, purch_amt, ord_date, customer_id and salesman_id.
 
 ```sql
--- Paste your SQL code below for Question 8
+SELECT *
+FROM Orders
+WHERE salesman_id=(
+                SELECT salesman_id
+                FROM Salesman
+                WHERE name='Paul Adam'
+                );
 ```
 
 **Output:**
@@ -134,27 +206,37 @@ DROP VIEW view_name;
 
 **Question 9**
 ---
--- Paste Question 9 here
+From the following tables, write a SQL query to determine the commission of the salespeople in Paris. Return commission.
 
 ```sql
--- Paste your SQL code below for Question 9
+SELECT commission
+FROM salesman
+WHERE salesman_id IN (
+                    SELECT salesman_id
+                    FROM customer
+                    WHERE city='Paris'
+                    );
 ```
 
 **Output:**
 
-![Output9](output.png)
+<img width="455" height="410" alt="image" src="https://github.com/user-attachments/assets/94433752-3b4d-4364-93cd-1e5faaa2866f" />
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+Write a SQL query to retrieve all columns from the CUSTOMERS table for customers whose salary is greater than $4500.
 
 ```sql
--- Paste your SQL code below for Question 10
+SELECT *
+FROM CUSTOMERS
+WHERE SALARY>4500;
 ```
 
 **Output:**
 
-![Output10](output.png)
+<img width="1222" height="518" alt="image" src="https://github.com/user-attachments/assets/697fbd6f-7e6a-497c-b220-f9c702e517d8" />
+
 
 
 ## RESULT
