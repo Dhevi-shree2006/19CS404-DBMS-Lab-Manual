@@ -49,7 +49,8 @@ FROM orders;
 
 **Output:**
 
-![Output1](output.png)
+<img width="397" height="376" alt="image" src="https://github.com/user-attachments/assets/8a297550-b5eb-4114-8246-45b533a77c90" />
+
 
 **Question 2**
 ---
@@ -65,7 +66,8 @@ WHERE city='Mumbai';
 
 **Output:**
 
-![Output2](output.png)
+<img width="701" height="370" alt="image" src="https://github.com/user-attachments/assets/1a7d73c6-3a0f-4328-9305-ef9029e53615" />
+
 
 **Question 3**
 ---
@@ -79,7 +81,8 @@ SELECT COUNT(*) AS COUNT FROM customer;
 
 **Output:**
 
-![Output3](output.png)
+<img width="417" height="380" alt="image" src="https://github.com/user-attachments/assets/e01e23bd-df5f-4289-83d5-d38c5f89e3f3" />
+
 
 **Question 4**
 ---
@@ -95,7 +98,8 @@ GROUP BY DoctorID;
 
 **Output:**
 
-![Output4](output.png)
+<img width="771" height="695" alt="image" src="https://github.com/user-attachments/assets/0aa24cdd-35de-4018-b3f4-c29f0fbde4cb" />
+
 
 **Question 5**
 ---
@@ -112,7 +116,8 @@ GROUP BY InsuranceCompany;
 
 **Output:**
 
-![Output5](output.png)
+<img width="881" height="812" alt="image" src="https://github.com/user-attachments/assets/ccf08177-0fc7-443a-8900-c6c170d3c47d" />
+
 
 **Question 6**
 ---
@@ -129,7 +134,8 @@ ORDER BY DATE(AppointmentDateTime);
 
 **Output:**
 
-![Output6](output.png)
+<img width="817" height="732" alt="image" src="https://github.com/user-attachments/assets/b152041f-d9c8-42f9-b090-0998099358a1" />
+
 
 **Question 7**
 ---
@@ -146,7 +152,8 @@ HAVING MIN(age) < 25;
 
 **Output:**
 
-![Output7](output.png)
+<img width="701" height="380" alt="image" src="https://github.com/user-attachments/assets/60e4af56-1c8d-414d-bb18-e5093adaf94b" />
+
 
 **Question 8**
 ---
@@ -163,7 +170,8 @@ HAVING AVG(salary) < 15000;
 
 **Output:**
 
-![Output8](output.png)
+<img width="738" height="675" alt="image" src="https://github.com/user-attachments/assets/ca46c839-4ff2-4a6a-8e1c-5d6bee21dcc4" />
+
 
 **Question 9**
 ---
@@ -180,6 +188,7 @@ HAVING AVG(income) BETWEEN 300000 AND 500000;
 
 **Output:**
 
+<img width="742" height="408" alt="image" src="https://github.com/user-attachments/assets/ec49417d-953e-4b1c-834e-4af76619e5d5" />
 
 
 
@@ -199,6 +208,7 @@ HAVING MIN(category_id) < 3;
 
 **Output:**
 
+<img width="740" height="425" alt="image" src="https://github.com/user-attachments/assets/ec5a6c5f-4cea-481a-aaa9-725a900ea859" />
 
 
 
