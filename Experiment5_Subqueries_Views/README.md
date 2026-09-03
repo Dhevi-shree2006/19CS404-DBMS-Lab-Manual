@@ -54,7 +54,8 @@ GROUP BY subject
 
 **Output:**
 
-![Output1](output.png)
+<img width="817" height="452" alt="image" src="https://github.com/user-attachments/assets/d04cfe1d-1f9b-4291-b40c-882b3d976b2e" />
+
 
 **Question 2**
 ---
@@ -71,7 +72,8 @@ WHERE dosage = (SELECT MIN(dosage)
 
 **Output:**
 
-![Output2](output.png)
+<img width="1037" height="428" alt="image" src="https://github.com/user-attachments/assets/081368d4-76cb-4afe-8da5-12fea73b2f38" />
+
 
 **Question 3**
 ---
@@ -100,7 +102,8 @@ WHERE city!=(
 
 **Output:**
 
-![Output3](output.png)
+<img width="1251" height="511" alt="image" src="https://github.com/user-attachments/assets/07925dbb-f74f-4e85-b7b5-22e2a0cefd54" />
+
 
 **Question 4**
 ---
@@ -121,7 +124,8 @@ WHERE age < (
 
 **Output:**
 
-![Output4](output.png)
+<img width="1253" height="488" alt="image" src="https://github.com/user-attachments/assets/e6c0f4f6-53fc-4cb4-859a-77c63e8e554c" />
+
 
 **Question 5**
 ---
@@ -150,7 +154,8 @@ WHERE phone IN(
 
 **Output:**
 
-![Output5](output.png)
+<img width="591" height="530" alt="image" src="https://github.com/user-attachments/assets/5d9df634-fd0b-45a7-9290-1898efd5c277" />
+
 
 **Question 6**
 ---
@@ -166,7 +171,8 @@ HAVING COUNT(c.customer_id)>1;
 
 **Output:**
 
-![Output6](output.png)
+<img width="667" height="546" alt="image" src="https://github.com/user-attachments/assets/06619662-5451-4b78-a9d3-f69716640a74" />
+
 
 **Question 7**
 ---
@@ -184,7 +190,8 @@ WHERE customer_id=(
 
 **Output:**
 
-![Output7](output.png)
+<img width="1232" height="423" alt="image" src="https://github.com/user-attachments/assets/e6d092ad-e21f-4b86-96c8-66be109636f4" />
+
 
 **Question 8**
 ---
@@ -202,7 +209,8 @@ WHERE salesman_id=(
 
 **Output:**
 
-![Output8](output.png)
+<img width="1231" height="496" alt="image" src="https://github.com/user-attachments/assets/d5393e60-c6ec-45cc-9408-b1ae53f7485d" />
+
 
 **Question 9**
 ---
