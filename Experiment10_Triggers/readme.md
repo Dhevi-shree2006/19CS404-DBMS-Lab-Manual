@@ -74,7 +74,7 @@ SELECT * FROM employee_log;
 ```
 **Output:**
 
-<img width="720" height="312" alt="image" src="https://github.com/user-attachments/assets/cd5aa050-2d9a-4d37-ad93-d46d5edfea0f" />
+<img width="816" height="341" alt="image" src="https://github.com/user-attachments/assets/cd30e322-0430-4577-949f-2a0a87e33110" />
 
 
 ---
@@ -113,8 +113,7 @@ SELECT * FROM sensitive_data;
 ```
 
 **Output:**
-
-<img width="452" height="203" alt="image" src="https://github.com/user-attachments/assets/42dfe506-0dc7-4516-8f6c-ebb0ba672ac6" />
+<img width="880" height="422" alt="image" src="https://github.com/user-attachments/assets/86821341-fdc4-4bf5-9992-3754eb6bf89a" />
 
 
 ---
@@ -157,7 +156,7 @@ SELECT * FROM products;
 
 **Output:**
 
-<img width="856" height="225" alt="image" src="https://github.com/user-attachments/assets/68029cf1-7029-48f5-b44a-d1e60be353e7" />
+<img width="922" height="267" alt="image" src="https://github.com/user-attachments/assets/57598131-b905-467d-ae8b-b08cdbd8c545" />
 
 ---
 
@@ -211,7 +210,7 @@ SELECT * FROM audit_log;
 
 **Output:**
 
-<img width="542" height="300" alt="image" src="https://github.com/user-attachments/assets/94c5d0d0-c52d-454a-9390-d02c27ae8bce" />
+<img width="942" height="406" alt="image" src="https://github.com/user-attachments/assets/0de8bde5-3c4d-4fcd-86a6-93c2bcf84f9f" />
 
 
 ---
@@ -251,7 +250,7 @@ SELECT * FROM employees;
 
 **Output:**
 
-<img width="500" height="310" alt="image" src="https://github.com/user-attachments/assets/973bfd3e-d4a5-4cf6-ab0d-c8f909448638" />
+<img width="983" height="433" alt="image" src="https://github.com/user-attachments/assets/f8ab16ed-8094-4447-a86f-ba6c8966394f" />
 
 
 ## RESULT
